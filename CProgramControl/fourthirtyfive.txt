@@ -1,0 +1,5 @@
+A criticism of the break statement and the continue statement is that each is unstructured.
+Actually, break statements and continue statements can always be replaced by structured staments, although doing so can be awkward. Describe in general how you would remove any break
+statement from a loop in a program and replace that statement with some structured equivalent.
+
+I replace it, through lead the condition of the loop to a false with the end of manage with a conditional that this if is a structured statement or I replace with a switch.

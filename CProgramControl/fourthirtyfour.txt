@@ -1,0 +1,7 @@
+Describe the process you would use to replace a do…while loop with an equivalent while
+loop. What problem occurs when you try to replace a while loop with an equivalent do…while
+loop? Suppose you’ve been told that you must remove a while loop and replace it with a do…while.
+What additional control statement would you need to use and how would you use it to ensure that
+the resulting program behaves exactly as the original?
+
+The proccess that I would use is write the staments inside of the loop of the while and outside of the the loopat the beginning. First I would verify that the condition at the start the loop always it was true to ensure that the behavior, it will be the same of the while.   
