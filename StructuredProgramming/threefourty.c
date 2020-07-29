@@ -1,23 +1,22 @@
 #include <stdio.h>
 
+
 /**
  * (Powers of 3 with an Infinite Loop)
+ *
+ * Return: 0 If is success
  */
-
-int main( void )
+int main(void)
 {
-	int pow, base;
+        int pow = 1, base = 3;
 
-	pow = 1;
-	base = 3;
+        /* Infinitive loop */
+        while (base == 3)
+        {
+                pow *= base;
 
-	// Infinitive loop
-	while ( base == 3 )
-	{
-		pow *= base;
+                printf("%d, ", pow);
+        }
 
-		printf( "%d, ", pow );
-	}
-
-	return (0);
+        return (0);
 }
