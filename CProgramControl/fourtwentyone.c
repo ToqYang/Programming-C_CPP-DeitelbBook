@@ -11,7 +11,7 @@
  */
 int main(void)
 {
-        int limit = 127;
+        const int limit = 127;
 
         for (int line = 0; line <= limit; ++line)
         {
