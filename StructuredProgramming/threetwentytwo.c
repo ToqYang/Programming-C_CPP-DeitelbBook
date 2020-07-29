@@ -18,8 +18,8 @@ int main(void)
         printf("Enter the prime number: ");
         scanf("%d", &pr_Number);
 
-        if (pr_Number > 1)
-        {
+        if (pr_Number > 1) {
+
                 for (n = 1; n <= pr_Number; n++)
                 {
                         if (pr_Number % n == 0)
@@ -29,13 +29,9 @@ int main(void)
                 }
 
                 if (count == 2)
-                {
                         printf("%d is a number prime.\n", pr_Number);
-                }
                 else
-                {
                         printf("%d not is a number prime.\n", pr_Number);
-                }
         }
 
         return (0);
