@@ -37,7 +37,7 @@ int main(void)
                 else if (column >= 1 && (column < (size - 1)))
                 {
                         /* Print first */
-                        printf("*");
+                        putchar(42);
 
                         /*
 			 rows less than size - 3 for adjust the spaces
@@ -46,12 +46,12 @@ int main(void)
 			 */
                         while (rows <= size - 3)
                         {
-                                printf(" ");
+                                putchar(32);
                                 rows++;
                         }
 
                         /* Print last */
-                        printf("*");
+                        putchar(42);
                         rows = 0;
                 }
 
