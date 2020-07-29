@@ -50,7 +50,7 @@ int main(void)
                         printf("State Sales Tax: $ %.2f\n", state);
                         printf("Total Sales Tax Collected: $ %.2f\n\n",
                                sales);
-                        printf("Earned: %.2f", total_Tax);
+                        printf("Earned: %.2f\n", total_Tax);
                 }
         }
         return (0);
