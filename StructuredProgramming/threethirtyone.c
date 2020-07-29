@@ -14,7 +14,6 @@
  *
  * Return: 0 if is success
  */
-
 int main(void)
 {
         /**
