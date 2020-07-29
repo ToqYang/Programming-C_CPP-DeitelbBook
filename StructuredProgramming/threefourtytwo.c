@@ -1,22 +1,21 @@
 #include <stdio.h>
 
+
 /**
- * What’s wrong with the following statement?
- * printf( "%d", --( x * y ) );
  * main - Print of manner correct
+ *
  * Return: 0 If is succesful
  */
-
-int main( void )
+int main(void)
 {
-	int x, y, z;
+        /* What’s wrong with the following statement?
+                printf( "%d", --( x * y ) ); */
+        int x = 5, y = 10, z = 0;
 
-	x = 5;
-	y = 10;
-	z = x * y;
-	--z;
+        z = x * y;
+        --z;
 
-	printf( "%d", z);
+        printf("%d\n", z);
 
-	return (0);
+        return (0);
 }
