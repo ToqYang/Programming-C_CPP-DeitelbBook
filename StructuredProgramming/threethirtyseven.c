@@ -2,8 +2,10 @@
 
 
 /**
- * (Detecting Multiples of a Number)
- * main - Print $, If is multiple of 50 print new space
+ * main - (Detecting Multiples of a Number)
+ *
+ * Print $, If is multiple of 50 print new space
+ *
  * Return: 0
  */
 int main(void)
