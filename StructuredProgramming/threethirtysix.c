@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 /**
  * main - (Armstrong Numbers)
  *
@@ -10,7 +9,7 @@ int main(void)
 {
         /* Variables */
         int num = 0, num1 = 0, num2 = 0, num3 = 0;
-        int pow1 = 1, pow2 = 1, pow3 = 1, power = 0, resultpower = 0;
+        int pow1 = 1, pow2 = 1, pow3 = 1, resultpower = 0;
         int i = 0;
 
         /* Print number and scan amstrong */
