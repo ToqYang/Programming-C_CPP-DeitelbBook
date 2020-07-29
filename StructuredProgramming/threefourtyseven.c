@@ -3,7 +3,7 @@
 
 /**
  * main - Print the target heart rate about years
- * Target-Heart-Rate Calculator)
+ * (Target-Heart-Rate Calculator)
  *
  * Return: 0 If, is succesful
  */
