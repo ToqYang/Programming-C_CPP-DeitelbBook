@@ -1,45 +1,39 @@
 #include <stdio.h>
 
+
 /**
+ * main - Print A + 3 succession
+ *
  * (Tabular Output) Write a program that utilizes
  * looping to produce the following table of values:
+ *
+ * Return: 0 if is success
  */
-
-/**
- * main - Print the A + 3
- * Return: 0
- */
-
-
-int main( void )
+int main(void)
 {
-	int rows, columns, counter;
+        int rows = 0, columns = 0, counter = 1;
 
-	rows = 0;
-	columns = 0;
-	counter = 1;
+        printf("A\tA+3\tA+6\tA+9\n");
 
-        printf( "A\tA+3\tA+6\tA+9\n" );
-
-        while ( counter <= 5 )
+        while (counter <= 5)
         {
-		rows = 1;
+                rows = 1;
 
-		columns = counter * 7;
+                columns = counter * 7;
 
-                printf( "%d\t", columns);
+                printf("%d\t", columns);
 
-                while ( rows <= 3 )
-		{
-			columns += 3;
+                while (rows <= 3)
+                {
+                        columns += 3;
 
-			printf( "%d\t", columns );
-			rows++;
-		}
+                        printf("%d\t", columns);
+                        rows++;
+                }
 
-		counter++;
+                counter++;
 
-		printf( "\n" );
+                printf("\n");
         }
 
         return (0);
