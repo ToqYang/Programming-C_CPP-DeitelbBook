@@ -46,9 +46,8 @@ int main(void)
 		cred_rec = cred_lim / 2;
 
 		if (bal_curr > cred_rec)
-		{
 			puts("You have the limit exceed");
-		}
+
 		printf("Number account is: %d\nCredit before of the recesion:\
                 $%d\nCredit after of the recesion: $%d\nCurrent Balance: $%d\n",
                 acc_number, cred_lim, cred_rec, bal_curr);
