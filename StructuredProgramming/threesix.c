@@ -9,18 +9,16 @@
 int main(void)
 {
 
-        unsigned int x, y, i, power;
+        unsigned int x = 0, y = 0, i = 0, power = 0;
 
-        x = 0;
-        y = 0;
-        i = 0;
-        power = 0;
 
-        /* A) Input unsigned integer variable x with scanf. Use the conversion specifier %u */
+        /* A) Input unsigned integer variable x with scanf.
+        Use the conversion specifier %u */
         puts("Enter the number");
         scanf("%u", &x);
 
-        /* B) Input unsigned integer variable y with scanf. Use the conversion specifier %u. */
+        /* B) Input unsigned integer variable y with scanf.
+        Use the conversion specifier %u. */
         puts("Enter the number");
         scanf("%u", &y);
 
@@ -30,7 +28,8 @@ int main(void)
         /* D) Set unsigned integer variable power to 1. */
         power = 1;
 
-        /* E) Multiply unsigned integer variable power by x and assign the result to power. */
+        /* E) Multiply unsigned integer variable
+        power by x and assign the result to power. */
         /* Test while G */
         while (i <= y)
         {
@@ -40,8 +39,10 @@ int main(void)
                 /* F) Increment variable i by 1. */
                 i++;
 
-                /* G) Test i to see if it’s less than or equal to y in the condition of a while statement. */
-                /* H) Output unsigned integer variable power with printf. Use the conversion specifier %u. */
+                /* G) Test i to see if it’s less than or equal to y in the
+                condition of a while statement. */
+                /* H) Output unsigned integer variable power with printf.
+                Use the conversion specifier %u. */
                 printf("%u\n", power);
         }
 
