@@ -1,4 +1,4 @@
 Describe in general how you would remove any continue statement from a loop in a program and replace that statement with some structured equivalent. Use the technique you developed
-here to remove the continue statement from the program of Fig. 4.12. 
+here to remove the continue statement from the program of Fig. 4.12.
 
 First, I would have that structured best my idea about of the problem and leave the part that contain the continue on the last part for that effectuate the same in comparison with the continue.
