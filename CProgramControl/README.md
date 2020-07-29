@@ -41,15 +41,15 @@ For my learning of about Low Level Programming
 |**fourthirteen.c**| Sum of the squares |
 |**fourthirtyeight.c**| “The Twelve Days of Christmas” |
 |**fourthirtyfive.txt**| Opinion about break and continue |
-|**fourthirtyfour.txt**|  |
-|**fourthirtynine.c**| |
-|**fourthirtyone.c**| |
-|**fourthirtyseven.txt**| |
-|**fourthirtythree.c**| |
-|**fourthirtytwo.c**| |
-|**fourtwelve.c**| |
-|**fourtwentyeight.c**| |
-|**fourtwentyfive.c**| |
-|**fourtwentyone.c**| |
-|**fourtwentyseven.c**| |
-|**fourtwentysix.c**| |
+|**fourthirtyfour.txt**| Replace do while |
+|**fourthirtynine.c**| Limitation Float |
+|**fourthirtyone.c**| Diamond Print |
+|**fourthirtyseven.txt**| Eliminate continue |
+|**fourthirtythree.c**| Roman to Decimal number |
+|**fourthirtytwo.c**| Diamond print N rows |
+|**fourtwelve.c**| Prime numbers 1-100 |
+|**fourtwentyeight.c**| Weekly Pay |
+|**fourtwentyfive.c**| Table decimal, binary, hexadecimal |
+|**fourtwentyone.c**| ASCII 0-127 |
+|**fourtwentyseven.c**| Sides correct |
+|**fourtwentysix.c**| Calculate value of PI |
