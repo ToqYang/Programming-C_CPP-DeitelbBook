@@ -49,7 +49,9 @@ int main(void)
 		{
 			puts("You have the limit exceed");
 		}
-		printf("Number account is: %d\nCredit before of the recesion: $%d\nCredit after of the recesion: $%d\nCurrent Balance: $%d\n", acc_number, cred_lim, cred_rec, bal_curr);
+		printf("Number account is: %d\nCredit before of the recesion:\
+                $%d\nCredit after of the recesion: $%d\nCurrent Balance: $%d\n",
+                acc_number, cred_lim, cred_rec, bal_curr);
 
 	}
 	return (0);
