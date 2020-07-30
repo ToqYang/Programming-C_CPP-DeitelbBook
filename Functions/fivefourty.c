@@ -1,8 +1,10 @@
 #include <stdio.h>
 
+
 /**
  * main - (Recursive main)
- * Return: Infinite recursion
+ *
+ * Return: (int) Infinite recursion
  */
 int main()
 {
