@@ -1,6 +1,8 @@
 #include <stdio.h>
 
+
 void rectangle(int a, int b, char character);
+
 
 /**
  * main - Show geometrical shapes
@@ -19,17 +21,20 @@ int main(void)
 
 	puts("Enter the character");
 	scanf(" %c", &fillCharacter);
-	
-	
+
 	rectangle(side1, side2, fillCharacter);
 
 	return (0);
 }
 
+
+
 /**
  * rectangle - Print the geometrical shapes
  * @a: y
  * @b: x
+ * @character: (char) Character
+ *
  */
 void rectangle(int a, int b, char character)
 {
