@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <math.h>
 
+
 int Is_Correct(double side1, double side2, double side3);
+
 
 /**
  * (Sides of a Right Triangle)
@@ -10,31 +12,38 @@ int Is_Correct(double side1, double side2, double side3);
  */
 int main(void)
 {
-	double side_One = 0, side_Two = 0, side_Three = 0;
-	int verify = 0;
+        double side_One = 0, side_Two = 0, side_Three = 0;
+        int verify = 0;
 
-	puts("Enter los values in x^2\nEnter the side A.");
-	scanf("%lf", &side_One);
-	puts("Enter the side B.");
-	scanf("%lf", &side_Two);
-	puts("Enter the side C");
-	scanf("%lf", &side_Three);
+        puts("Enter los values in x^2\nEnter the side A.");
+        scanf("%lf", &side_One);
+        puts("Enter the side B.");
+        scanf("%lf", &side_Two);
+        puts("Enter the side C");
+        scanf("%lf", &side_Three);
 
-	verify = Is_Correct(side_One, side_Two, side_Three);
+        verify = Is_Correct(side_One, side_Two, side_Three);
 
-	printf("(True: 1 False:0) %d\n", verify);
+        printf("(True: 1 False:0) %d\n", verify);
 
-	return (0);
+        return (0);
 }
+
+
 
 /**
  * Is_Correct - Verify if the sides of a triangle is correct
+ * @side1: (double) a
+ * @side2: (double) b
+ * @side1: (double) c
+ *
  * Return: 0 if is correct and 1 if it isn't corrects
  */
 int Is_Correct(double side1, double side2, double side3)
 {
-	/* Theorem of pytaghoras a^2 + b^2 = c^2 */
-	if ( (pow(side1, 2) + pow(side2, 2)) == pow(side3, 2) )
-		return (1);
-	return (0);
+        /* Theorem of pytaghoras a^2 + b^2 = c^2 */
+        if ((pow(side1, 2) + pow(side2, 2)) == pow(side3, 2))
+                return (1);
+
+        return (0);
 }
