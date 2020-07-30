@@ -6,7 +6,7 @@ int mystery(int a, int b);
 
 
 /**
- * main - Take two numbers and thegive at the function
+ * main - Take two numbers and give at the function
  *
  * Return: 0 If is success
  */
