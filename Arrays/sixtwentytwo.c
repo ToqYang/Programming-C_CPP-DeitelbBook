@@ -1,7 +1,9 @@
 #include <stdio.h>
 
+
 /**
- * (Total Sales)
+ * main - (Total Sales)
+ *
  * Salespeople send a slip with
  * a) The salesperson number
  * b) The product number
