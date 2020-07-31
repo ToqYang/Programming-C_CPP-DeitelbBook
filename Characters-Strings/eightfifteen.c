@@ -3,13 +3,15 @@
 
 #define SIZE 100
 
+
 void rev_sen(char *w, int size);
+
 
 /**
  * main - (Displaying a Sentence with Its Words Reversed)
  *        Tokenize and revert word
  *
- * Return: 0 if is success
+ * Return: (int) 0 if is success
  */
 int main(void)
 {
