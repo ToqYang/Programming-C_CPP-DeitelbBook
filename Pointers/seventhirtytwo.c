@@ -45,7 +45,7 @@ int main(void)
                 average = 0;
         }
 
-        printf("%s  %s\n", "Topics", "(1-10)", "Average");
+        printf("%s %s %s\n", "Topics", "(1-10)", "Average");
         /* Print Data */
         for (size_t i = 0; i < TOPICS; ++i) {
                 printf("%s: ", topics[i]);
