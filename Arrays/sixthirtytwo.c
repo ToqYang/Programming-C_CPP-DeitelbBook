@@ -1,7 +1,14 @@
 #include <stdio.h>
 
+
 size_t linear_search(const int array[], int key, size_t size);
 
+
+/**
+ * main - Show Linear search
+ *
+ * Return: (int) 0 if is success
+ */
 int main(void)
 {
 	int elem[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
