@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 #define SIZE 73
+
 
 int move_tortoise(int a);
 int move_hare(int b);
@@ -12,44 +14,46 @@ void print_race(char *street, int *a, int *b);
 /**
  * main - (Simulation: The Tortoise and the Hare)
  *
- * Return: 0 if is success
+ * Return: (int) 0 if is success
  */
 int main(void)
 {
-	char street[SIZE] = "";
-	int tortoisepos = 1, harepos = 1;
+        char street[SIZE] = "";
+        int tortoisepos = 1, harepos = 1;
 
-	puts("BANG !!!!!");
-	puts("AND THEY'RE OFF !!!!!");
-	srand(time(0));
+        puts("BANG !!!!!");
+        puts("AND THEY'RE OFF !!!!!");
+        srand(time(0));
 
-	/* Print - */
-	puts("");
-	for (size_t i = 0; i < SIZE; ++i)
-		putchar(45);
-	puts("");
+        /* Print - */
+        puts("");
+        for (size_t i = 0; i < SIZE; ++i)
+                putchar(45);
+        puts("");
 
-	while (tortoisepos <= 71 && harepos <= 71) {
-		tortoisepos = move_tortoise(tortoisepos);
-		harepos = move_hare(harepos);
-		verify_position(&tortoisepos, &harepos);
-		print_race(street, &tortoisepos, &harepos);
+        while (tortoisepos <= 71 && harepos <= 71) {
+                tortoisepos = move_tortoise(tortoisepos);
+                harepos = move_hare(harepos);
+                verify_position(&tortoisepos, &harepos);
+                print_race(street, &tortoisepos, &harepos);
 
-		puts("");
-		for (size_t i = 0; i < SIZE; ++i)
-			putchar(45);
-		puts("");
+                puts("");
+                for (size_t i = 0; i < SIZE; ++i)
+                        putchar(45);
+                puts("");
 
-		if ((tortoisepos >= 71 && harepos >= 71) && (tortoisepos == harepos)) {
-			puts("\nIt's a tie.");
-		} else if (tortoisepos >= 71) {
-			puts("\nTORTOISE WINS!!!");
-		} else if (harepos >= 71)
-			puts("\nHare wins. Yuch");
-	}
+                if ((tortoisepos >= 71 && harepos >= 71) && (tortoisepos == harepos)) {
+                        puts("\nIt's a tie.");
+                } else if (tortoisepos >= 71) {
+                        puts("\nTORTOISE WINS!!!");
+                }
+                else if (harepos >= 71)
+                        puts("\nHare wins. Yuch");
+        }
 
-	return (0);
+        return (0);
 }
+
 
 
 /**
@@ -61,10 +65,10 @@ int main(void)
  */
 void verify_position(int *a, int *b)
 {
-	if (*a < 1)
-		*a = 1;
-	if (*b < 1)
-		*b = 1;
+        if (*a < 1)
+                *a = 1;
+        if (*b < 1)
+                *b = 1;
 }
 
 
@@ -80,16 +84,16 @@ void verify_position(int *a, int *b)
  */
 int move_tortoise(int a)
 {
-	int i = 1 + rand() % 10;
+        int i = 1 + rand() % 10;
 
-	if (i >= 1 && i <= 5)
-		return (a + 3);
-	if (i >= 6 && i <= 7)
-		return (a - 3);
-	if (i >= 8 && i <= 10)
-		return (a + 3);
+        if (i >= 1 && i <= 5)
+                return (a + 3);
+        if (i >= 6 && i <= 7)
+                return (a - 3);
+        if (i >= 8 && i <= 10)
+                return (a + 3);
 
-	return (0);
+        return (0);
 }
 
 
@@ -105,20 +109,20 @@ int move_tortoise(int a)
  */
 int move_hare(int b)
 {
-	int i = 1 + rand() % 10;
+        int i = 1 + rand() % 10;
 
-	if (i >= 1 && i <= 2)
-		return (0);
-	if (i >= 3 && i <= 4)
-		return (b + 9);
-	if (i == 5)
-		return (b - 12);
-	if (i >= 6 && i <= 8)
-		return (++b);
-	if (i >= 9 && i <= 10)
-		return (b - 2);
+        if (i >= 1 && i <= 2)
+                return (0);
+        if (i >= 3 && i <= 4)
+                return (b + 9);
+        if (i == 5)
+                return (b - 12);
+        if (i >= 6 && i <= 8)
+                return (++b);
+        if (i >= 9 && i <= 10)
+                return (b - 2);
 
-	return (0);
+        return (0);
 }
 
 
@@ -131,23 +135,26 @@ int move_hare(int b)
  */
 void print_race(char *street, int *a, int *b)
 {
-	street[0] = 'S';
-	street[72] = 'G';
-	char tie[7] = "OUCH!!!";
+        street[0] = 'S';
+        street[72] = 'G';
+        char tie[7] = "OUCH!!!";
 
-	for (size_t i = 1; i < SIZE - 1; ++i) {
-			street[i] = ' ';
-	}
-	street[*a] = 'T';
-	street[*b] = 'H';
+        for (size_t i = 1; i < SIZE - 1; ++i)
+        {
+                street[i] = ' ';
+        }
+        street[*a] = 'T';
+        street[*b] = 'H';
 
-	if ((*a == *b) > 0) {
-		for (size_t j = *b; tie[j] != '\0'; ++j)
-			street[j] = tie[j];
-	}
+        if ((*a == *b) > 0)
+        {
+                for (size_t j = *b; tie[j] != '\0'; ++j)
+                        street[j] = tie[j];
+        }
 
-	for (size_t i = 0; i < SIZE; ++i) {
-		printf("%c", street[i]);
-	}
-	puts("");
+        for (size_t i = 0; i < SIZE; ++i)
+        {
+                printf("%c", street[i]);
+        }
+        puts("");
 }
