@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 void building_foot(void);
 void car_foot(void);
 void byci_foot(void);
@@ -30,6 +31,7 @@ int main(void)
 
 	return (0);
 }
+
 
 
 /**
