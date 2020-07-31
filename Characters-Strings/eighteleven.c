@@ -6,9 +6,10 @@
 
 /**
  * main - (Random Sentences)
+ *
  *        Generate 20 phrases
  *
- * Return: 0 if is success
+ * Return: (int) 0 if is success
  */
 int main(void)
 {
