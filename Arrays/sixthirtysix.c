@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 void print_backward(char *str, int size);
+
 
 /**
  * main - (Print a String Backward) Recursion
@@ -17,10 +19,12 @@ int main(void)
 	return (0);
 }
 
+
 /**
  * print_backward - In mode recursion print one string
  * @str: (char *) String with a message
  * @size: (int) Iterator of the string
+ *
  */
 void print_backward(char *str, int size)
 {
