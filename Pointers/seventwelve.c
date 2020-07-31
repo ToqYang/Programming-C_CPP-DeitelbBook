@@ -16,7 +16,7 @@ void determine_deck(unsigned int *r, unsigned int *c);
  * main - (Card Shuffling and Dealing)
  *        Determine hand
  *
- * Return: 0 if is success
+ * Return: (int) 0 if is success
  */
 int main(void)
 {
