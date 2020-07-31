@@ -4,12 +4,14 @@
 #define SIZE 100
 #define SIZELIKE 20
 
+
 void get_string(char *text, int size);
+
 
 /**
  * main - (Counting the Occurrences of a Substring)
  *
- * Return: 0 if is success
+ * Return: (int) 0 if is success
  */
 int main(void)
 {
