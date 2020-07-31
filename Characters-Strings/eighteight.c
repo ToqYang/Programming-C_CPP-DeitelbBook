@@ -6,7 +6,7 @@
  * main - Converting Strings to Floating Point for Calculations)
  *        Read 6 string and take average
  *
- * Return: 0 if is success
+ * Return: (int) 0 if is success
  */
 int main(void)
 {
