@@ -3,6 +3,15 @@
 #include <stdlib.h>
 
 
+
+/**
+ * struct naturalsNumbers - Single Linked List
+ * @n: (int) Num to Store
+ * @nextPtr: (struct naturalsNumbers *) points to the next node
+ *
+ * Description: Store the integers nodes
+ *
+ */
 struct naturalsNumbers {
 	int n;
 	struct naturalsNumbers *nextPtr;
@@ -12,6 +21,7 @@ typedef struct naturalsNumbers NaturalNums;
 typedef NaturalNums *NaturalNumsPtr;
 
 void insert_nodes(NaturalNumsPtr *head, int num);
+void make_list(NaturalNumsPtr *new, NaturalNumsPtr src);
 void print_nodes(NaturalNums *head);
 void delete_node(NaturalNums *head);
 NaturalNumsPtr merge(NaturalNumsPtr list1, NaturalNumsPtr list2);
@@ -20,7 +30,7 @@ NaturalNumsPtr merge(NaturalNumsPtr list1, NaturalNumsPtr list2);
 /**
  * main - (Concatenating Lists)
  *
- * Return: 0 if is success
+ * Return: (int) 0 if is success
  */
 int main(void)
 {;
@@ -47,67 +57,62 @@ int main(void)
 	print_nodes(list1);
 	puts("-------------------------");
 
+        NaturalNumsPtr list_merge = NULL;
+	list_merge = merge(list1, list2);
 
-	NaturalNumsPtr merge(NaturalNumsPtr list1, NaturalNumsPtr list2);
+        puts("New Merge");
+	print_nodes(list_merge);
+	puts("-------------------------");
 
 	delete_node(list1);
 	delete_node(list2);
+        delete_node(list_merge);
 
 	list1 = NULL;
 	list2 = NULL;
+        list_merge = NULL;
 
 	return (0);
 }
 
-void clone(NaturalNumsPtr *dest, NaturalNumsPtr src)
-{
-	while (src) {
-		*dest = (NaturalNumsPtr)malloc(sizeof(NaturalNums));
-		if (!(*dest))
-			exit(EXIT_FAILURE);
 
-		*dest->n = src->n;
-		src = src->nextPtr;
-	}
+/**
+ * make_list - Clone a list
+ * @new: (NaturalNumsPtr *) New List
+ * @src: (NaturalNumsPtr) Source
+ *
+ */
+void make_list(NaturalNumsPtr *new, NaturalNumsPtr src)
+{
+	/* Traversing list Until NULL or Find Letter minour */
+	while (src != NULL) {
+	        insert_nodes(new, src->n);
+                src = src->nextPtr;
+        }
 }
 
+
+/**
+ * merge - Merge a linked list with other
+ * @list1: (NaturalNumsPtr) First
+ * @list2: (NaturalNumsPtr) Second
+ *
+ * Return: (NaturalNumsPtr) Return the head node of the merge
+ */
 NaturalNumsPtr merge(NaturalNumsPtr list1, NaturalNumsPtr list2)
 {
 	NaturalNumsPtr merge = NULL;
-	NaturalNumsPtr list1Ptr = list1;
-	NaturalNumsPtr previousPtr = NULL;
-	NaturalNumsPtr currentPtr = NULL;
-	int isChange = 0;
 
-	clone(&merge, list1);
-	currentPtr = merge;
+        /* Make a New list */
+        make_list(&merge, list1);
 
-	/* While None Will Be Null */
-	while (list2) {
-		while (list1Ptr) {
-			if (list2->n >= currentPtr->n) {
-				number = list2->n;
-				previousPtr->nextPtr = currentPtr;
-				isChange = 1;
-			}
-			currentPtr = currentPtr->nextPtr
-			list1Ptr = list1Ptr->nextPtr;
-		}
+        /* Insert Nodes of the List2 in new list */
+        while (list2) {
+                insert_nodes(&merge, list2->n);
+                list2 = list2->nextPtr;
+        }
 
-		if (change == 1) {
-			previousPtr->nextPtr->n = number;
-		} else if (change == 0) {
-			
-		}
-
-		previousPtr = NULL;
-		currentPtr = merge;
-		list1Ptr = list1;
-		isChange = 0;
-
-		list2 = list2->nextPtr;
-	}
-
+        return (merge);
 }
 
 
@@ -119,7 +124,7 @@ NaturalNumsPtr merge(NaturalNumsPtr list1, NaturalNumsPtr list2)
  */
 void insert_nodes(NaturalNumsPtr *head, int num)
 {
-	NaturalNumsPtr newPtr = (NaturalNumsPtr)malloc(sizeof(NaturalNums));
+	NaturalNumsPtr newPtr = malloc(sizeof(NaturalNums));
 	NaturalNumsPtr currentPtr = *head;
 	NaturalNumsPtr previousPtr = NULL;
 
@@ -182,42 +187,5 @@ void print_nodes(NaturalNums *head)
 	while (head != NULL) {
 		printf("%2d\n", head->n);
 		head = head->nextPtr;
-	}
-}
-
-
-/**
- * insert_nodes - Insert node based in order alphabetic
- * @head: (NaturalNums) Head of the Pointer
- * @n: (int) Number of Integer
- *
- */
-void insert_nodes(NaturalNumsPtr *head, int num)
-{
-	NaturalNumsPtr newPtr = (NaturalNumsPtr)malloc(sizeof(NaturalNums));
-	NaturalNumsPtr currentPtr = *head;
-	NaturalNumsPtr previousPtr = NULL;
-
-	if (!newPtr)
-		exit(EXIT_FAILURE);
-
-	/* Copy info From Arguments */
-	newPtr->n = num;
-	newPtr->nextPtr = NULL;
-
-	/* Traversing list Until NULL or Find Letter minour */
-	while (currentPtr != NULL && num > currentPtr->n) {
-		previousPtr = currentPtr;
-		currentPtr = currentPtr->nextPtr;
-	}
-
-	/* In Case of be First Node */
-	if (!previousPtr) {
-		newPtr->nextPtr = *head;
-		*head = newPtr;
-
-	} else {
-		previousPtr->nextPtr = newPtr;
-		newPtr->nextPtr = currentPtr;
 	}
 }
