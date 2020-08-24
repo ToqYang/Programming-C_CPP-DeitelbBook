@@ -1,0 +1,4 @@
+What is the purpose of function overloading?
+
+The purpose is work with different data type doing
+the same operation
