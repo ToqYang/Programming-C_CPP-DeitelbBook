@@ -23,7 +23,6 @@
 - Placing a Class in a Separate File for Reusability
 - Separating Interface from Implementation
 - Validating Data with set Functions
--
 
 ## Versioning
 
