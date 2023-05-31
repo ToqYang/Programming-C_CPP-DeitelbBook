@@ -1,13 +1,17 @@
 #ifndef TIME_H
 #define TIME_H
 
-#include <iostream.h>
-#include <time.h>
+#include <iostream>
+#include <ctime>
 
 class Time {
-  public:
-
-  private: 
+ public:
+    Time(void);
+    void DisplayTime(void) const;
+ private:
+    int min;
+    int hour;
+    int sec;
 };
 
-#endif
+#endif   // TIME_H

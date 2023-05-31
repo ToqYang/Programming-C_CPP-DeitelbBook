@@ -1,19 +1,22 @@
-#ifndef TIME_H
-#define TIME_H
+#ifndef COMPLEX_H
+#define COMPLEX_H
 
 #include <iostream>
-#include <math>
+#include <cmath>
 
-class Complex
-{
-public:
+class Complex {
+ public:
   explicit Complex(double = 0, double = 0, double = 0, double = 0);
+
   void add(void);
+
   void sub(void);
+
   void print(void);
+
   void ~Complex(void);
 
-private:
+ private:
   double z1;
   double z2;
   double z3;
@@ -22,4 +25,4 @@ private:
   double imaginePart;
 };
 
-#endif
+#endif  // COMPLEX_H

@@ -1,7 +1,6 @@
-#include "../Headers/Complex.h"
+#include "../headers/Complex.h"
 
-int main()
-{
+int main() {
   Complex first(5, 3, 4, 2);
   first.print();
 

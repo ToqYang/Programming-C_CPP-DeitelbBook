@@ -1,4 +1,4 @@
-#include "../Headers/Complex.h"
+#include "../headers/Complex.h"
 
 /**
  * Complex - Constructor
@@ -10,15 +10,13 @@
  *
  */
 Complex::Complex(double z1r, double z1i, double z2r, double z2i)
-    : z1(z1r), z2(z1i), z3(z2r), z4(z2i)
-{
+    : z1(z1r), z2(z1i), z3(z2r), z4(z2i) {
 }
 
 /**
  * Complex - Add numbers complex
  */
-Complex::void add()
-{
+Complex::void add() {
   realPart = z1 + z3;
   imaginePart = z2 + z4;
 }
@@ -26,8 +24,7 @@ Complex::void add()
 /**
  * Complex - Substract numbers complex
 */
-Complex::void sub()
-{
+Complex::void sub() {
   realPart = z1 - z3;
   imaginePart = z2 - z4;
 }
@@ -35,7 +32,6 @@ Complex::void sub()
 /**
  * Complex - Print Numbers
 */
-Complex::void print()
-{
+Complex::void print() {
   std::cout << "(" << realPart << ", " << imaginePart << "i)";
 }
